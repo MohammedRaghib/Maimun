@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #261f33;
+    color: #e06a3a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #3a2a44;
+    color: white;
+    position: fixed;
+    left: -350px;
+    top: 0;
+    transition: 0.3s;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    display: block;
+}
+
+.close-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-btn span {
+    width: 40px;
+    height: 5px;
+    background: #e06a3a;
+    border-radius: 5px;
+}
+
+/* Toggle Button Animation */
+.menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu span {
+    width: 40px;
+    height: 5px;
+    background: #e06a3a;
+    border-radius: 5px;
+}
+
+/* Main Sections */
+.products,
+.about {
+    margin-bottom: 50px;
+}
+
+.about {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: #3a2a44;
+    border-radius: 10px;
+    width: 20%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.divider {
+    margin-top: 20px;
+    width: 100%;
+    height: 5px;
+    background: #3a2a44;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.link {
+    text-align: center;
+    background: #e06a3a;
+    color: #261f33;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link:hover {
+    background: #ff8a3a;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* 🎯 Responsive Design: Media Queries */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .product-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product {
+        width: 20%;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+
+    .link {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .product-list {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .product {
+        width: 20%;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        justify-items: center;
+    }
+
+    .product {
+        width: 100%;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+
+    .link {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+}

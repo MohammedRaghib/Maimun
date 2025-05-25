@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | MAIMUN</title>
+    <link rel="stylesheet" href="./CSS/products.css">
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <button id="menu-btn" class="menu-btn" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+    </button>
+
+    <header>
+        <h1>Products</h1>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="search" onkeyup="searchProducts()" placeholder="Search products...">
+        </div>
+
+        <section class="product-grid">
+            <div class="product" data-name="Laptop">Laptop</div>
+            <div class="product" data-name="Smartphone">Smartphone</div>
+            <div class="product" data-name="Tablet">Tablet</div>
+            <div class="product" data-name="Headphones">Headphones</div>
+            <div class="product" data-name="Camera">Camera</div>
+            <div class="product" data-name="Smartwatch">Smartwatch</div>
+        </section>
+    </main>
+
+    <footer>
+        <div>MAIMUN</div>
+        <div>© 2025</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

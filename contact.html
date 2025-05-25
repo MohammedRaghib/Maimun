@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | MAIMUN</title>
+    <link rel="stylesheet" href="./CSS/contact.css">
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <button id="menu-btn" class="menu-btn" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+    </button>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <main class="contact-grid">
+        <section class="contact-info">
+            <h2>Contact Information:</h2>
+            <table>
+                <tr>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>+123-456-7890</td>
+                    <td>support@maimun.com</td>
+                </tr>
+                <tr>
+                    <td>+987-654-3210</td>
+                    <td>info@maimun.com</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="map">
+            <h2>Find Us Here:</h2>
+            <iframe src="https://maps.google.com/maps?q=Nairobi&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
+                height="300" style="border:0;" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <section class="feedback">
+        <h2>Feedback / Complaints:</h2>
+        <p>We value your thoughts. Let us know how we can improve!</p>
+        <a href="feedback.html" class="feedback-link">Submit Feedback</a>
+    </section>
+
+    <footer>
+        <div>MAIMUN</div>
+        <div>© 2025</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
