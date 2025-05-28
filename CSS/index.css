@@ -2,10 +2,10 @@
 
 /* Define Global Variables */
 :root {
-    --primary-color: #e06a3a;
-    --secondary-color: #3a2a44;
-    --background-color: #261f33;
-    --text-color: white;
+    --primary-color: #4a6bff;
+    --secondary-color: #6a8cff;
+    --background-color: #f0f5ff;
+    --text-color: #2a4aff;
     --header-font-size: 4rem;
     --sidebar-width: 250px;
     --border-radius: 10px;
@@ -15,7 +15,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--background-color);
-    color: var(--primary-color);
+    color: var(--text-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -167,7 +167,7 @@ h2 {
 }
 
 .link:hover {
-    background: #ff8a3a;
+    background: #011485;
 }
 
 /* Footer */
