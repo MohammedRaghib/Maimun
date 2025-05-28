@@ -29,19 +29,19 @@ MAIMUN is a responsive website designed to display products and company info, al
 
 - Main entry point to the website.
 - Navigation links to Products and Contact pages.
-- Displays a brief overview of products (A, B, C, D).
-- Includes an "About" section.
+- Displays a list of 4 products.
+- Includes an "Info" section.
 - Quick links to Contact and Feedback.
 
 ### 2. Products (`products.html`)
 
-- Lists available products: Laptop, Smartphone, Tablet, Headphones, Camera, Smartwatch.
+- Lists available products.
 - Search bar to filter products by name.
 
 ### 3. Contact (`contact.html`)
 
 - Provides company contact information (phone and email).
-- Embedded Google map showing the company's location (Nairobi).
+- Embedded Google map showing the company's location.
 - Section for users to submit feedback or complaints.
 
 ## Setup & Installation
