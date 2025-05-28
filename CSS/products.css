@@ -90,6 +90,18 @@ body {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    max-width: 400px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: var(--product-border-radius);
+}
+
 /* Header */
 header {
     display: flex;
