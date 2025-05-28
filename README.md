@@ -35,6 +35,7 @@ MAIMUN is a responsive website designed to display products and company info, al
 
 ### 2. Products (`products.html`)
 
+- Links to info on food standards
 - Lists available products.
 - Search bar to filter products by name.
 
