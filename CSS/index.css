@@ -1,33 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+/* Define Global Variables */
+:root {
+    --primary-color: #4a6bff;
+    --secondary-color: #6a8cff;
+    --background-color: #f0f5ff;
+    --text-color: #2a4aff;
+    --header-font-size: 4rem;
+    --sidebar-width: 250px;
+    --border-radius: 10px;
+    --spacing: 20px;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #261f33;
-    color: #e06a3a;
+    background-color: var(--background-color);
+    color: var(--text-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: var(--spacing);
 }
 
 /* Sidebar */
 .sidebar {
-    width: 250px;
+    width: var(--sidebar-width);
     height: 100vh;
-    background: #3a2a44;
-    color: white;
+    background: var(--secondary-color);
+    color: var(--text-color);
     position: fixed;
     left: -350px;
     top: 0;
     transition: 0.3s;
-    padding: 20px;
+    padding: var(--spacing);
     display: flex;
     flex-direction: column;
 }
 
 .sidebar a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1.5rem;
     margin: 10px 0;
@@ -38,7 +50,7 @@ body {
     font-size: 2rem;
     background: none;
     border: none;
-    color: white;
+    color: var(--text-color);
     cursor: pointer;
     align-self: flex-end;
 }
@@ -47,10 +59,11 @@ body {
     left: 0;
 }
 
+/* Menu Button */
 .menu-btn {
     position: fixed;
     top: 60px;
-    right: 20px;
+    right: var(--spacing);
     background: transparent;
     border: none;
     cursor: pointer;
@@ -62,8 +75,8 @@ body {
 .menu-btn span {
     width: 40px;
     height: 5px;
-    background: #e06a3a;
-    border-radius: 5px;
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
 }
 
 /* Toggle Button Animation */
@@ -79,39 +92,23 @@ body {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: var(--spacing);
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: var(--header-font-size);
     font-weight: 800;
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.menu span {
-    width: 40px;
-    height: 5px;
-    background: #e06a3a;
-    border-radius: 5px;
 }
 
 /* Main Sections */
 .products,
 .about {
-    margin-bottom: 50px;
-}
-
-.about {
+    margin-bottom: var(--spacing);
     text-align: center;
 }
 
@@ -120,16 +117,17 @@ h2 {
     font-weight: 700;
 }
 
+/* Product Grid */
 .product-list {
     display: flex;
     justify-content: space-evenly;
-    gap: 20px;
+    gap: var(--spacing);
     flex-wrap: wrap;
 }
 
 .product {
-    background: #3a2a44;
-    border-radius: 10px;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
     width: 20%;
     height: 80px;
     display: flex;
@@ -140,36 +138,36 @@ h2 {
 }
 
 .divider {
-    margin-top: 20px;
+    margin-top: var(--spacing);
     width: 100%;
     height: 5px;
-    background: #3a2a44;
+    background: var(--secondary-color);
 }
 
 /* Actions */
 .actions {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--spacing);
     max-width: 400px;
     margin: auto;
 }
 
 .link {
     text-align: center;
-    background: #e06a3a;
-    color: #261f33;
+    background: var(--primary-color);
+    color: var(--background-color);
     font-size: 1.8rem;
     font-weight: 700;
     padding: 15px;
     border: none;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     text-decoration: none;
 }
 
 .link:hover {
-    background: #ff8a3a;
+    background: #011485;
 }
 
 /* Footer */
@@ -178,10 +176,10 @@ footer {
     justify-content: space-between;
     font-size: 2rem;
     font-weight: 700;
-    margin-top: 10px;
+    margin-top: var(--spacing);
 }
 
-/* 🎯 Responsive Design: Media Queries */
+/* 🎯 Fully Responsive Design */
 @media (max-width: 1024px) {
     h1 {
         font-size: 3rem;
@@ -237,7 +235,7 @@ footer {
     .product-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: var(--spacing);
         justify-items: center;
     }
 

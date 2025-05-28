@@ -1,36 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+/* Define Global Variables */
+:root {
+    --primary-color: #4a6bff;
+    --secondary-color: #6a8cff;
+    --background-color: #f0f5ff;
+    --text-color: #2a4aff;
+    --header-font-size: 3.5rem;
+    --sidebar-width: 250px;
+    --border-radius: 10px;
+    --spacing: 20px;
+    --font-weight-bold: 700;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #261f33;
-    color: #e06a3a;
+    background-color: var(--background-color);
+    color: var(--text-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: var(--spacing);
 }
 
 /* Sidebar */
 .sidebar {
-    width: 250px;
+    width: var(--sidebar-width);
     height: 100vh;
-    background: #3a2a44;
-    color: white;
+    background: var(--secondary-color);
+    color: var(--text-color);
     position: fixed;
     left: -350px;
     top: 0;
     transition: 0.3s;
-    padding: 20px;
+    padding: var(--spacing);
     display: flex;
     flex-direction: column;
 }
 
 .sidebar a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1.5rem;
-    margin: 10px 0;
+    margin: var(--spacing) 0;
     display: block;
 }
 
@@ -38,7 +51,7 @@ body {
     font-size: 2rem;
     background: none;
     border: none;
-    color: white;
+    color: var(--text-color);
     cursor: pointer;
     align-self: flex-end;
 }
@@ -51,7 +64,7 @@ body {
 .menu-btn {
     position: fixed;
     top: 60px;
-    right: 20px;
+    right: var(--spacing);
     background: transparent;
     border: none;
     cursor: pointer;
@@ -63,22 +76,9 @@ body {
 .menu-btn span {
     width: 40px;
     height: 5px;
-    background: #e06a3a;
-    border-radius: 5px;
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
     transition: 0.3s;
-}
-
-/* Toggle Button Animation */
-.menu-btn.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-btn.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-btn.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Header */
@@ -89,8 +89,8 @@ header {
 }
 
 h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: var(--header-font-size);
+    font-weight: var(--font-weight-bold);
     text-align: center;
 }
 
@@ -98,70 +98,65 @@ h1 {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 40px;
+    gap: var(--spacing);
+    margin-top: var(--spacing);
 }
 
 /* Contact Info Table */
 .contact-info table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    background: #3a2a44;
-    padding: 10px;
-    border-radius: 10px;
+    margin-top: var(--spacing);
+    background: var(--secondary-color);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
 }
 
-.contact-info th,
-.contact-info td {
+.contact-info th, .contact-info td {
     padding: 12px;
-    border: 1px solid #e06a3a;
+    border: 1px solid var(--primary-color);
     text-align: left;
-    color: white;
+    color: var(--text-color);
 }
 
 .contact-info th {
-    background: #e06a3a;
-    color: #261f33;
+    background: var(--primary-color);
+    color: var(--background-color);
 }
 
 /* Map Section */
 .map iframe {
     width: 100%;
     height: 300px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 /* Feedback Section */
 .feedback {
-    margin-top: 50px;
+    margin-top: var(--spacing);
     text-align: center;
-    padding: 20px;
-    background: #3a2a44;
-    border-radius: 10px;
+    padding: var(--spacing);
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
 }
 
 .feedback h2 {
     font-size: 2rem;
-    font-weight: 700;
-}
-
-.feedback p {
-    margin: 15px 0;
+    font-weight: var(--font-weight-bold);
 }
 
 .feedback-link {
     display: inline-block;
-    background: #e06a3a;
-    color: #261f33;
+    background: var(--primary-color);
+    color: var(--background-color);
     padding: 12px 20px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
 }
 
 .feedback-link:hover {
-    background: #ff8a3a;
+    background: #011485;
 }
 
 /* Footer */
@@ -169,15 +164,14 @@ footer {
     display: flex;
     justify-content: space-between;
     font-size: 2rem;
-    font-weight: 700;
-    margin-top: 10px;
+    font-weight: var(--font-weight-bold);
+    margin-top: var(--spacing);
 }
 
 /* 🎯 Fully Responsive Design */
 @media (max-width: 1024px) {
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
 
     h1 {
